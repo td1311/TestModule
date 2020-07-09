@@ -19,6 +19,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* TestModuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TestModuleTests.m */; };
 		76BDC613BE70809AA72F408F /* libPods-TestModule-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4C6D4AECE801CEA52CDB26 /* libPods-TestModule-tvOSTests.a */; };
+		8BA0001D24B6FA0300118EE7 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA0001C24B6FA0300118EE7 /* Device.m */; };
 		FB2B2B5BCA71ED148951DA13 /* libPods-TestModule-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD03C49533D9E704926669 /* libPods-TestModule-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,9 @@
 		62E6FE8F85C12A91ECA350F0 /* Pods-TestModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestModule.release.xcconfig"; path = "Target Support Files/Pods-TestModule/Pods-TestModule.release.xcconfig"; sourceTree = "<group>"; };
 		63AD03C49533D9E704926669 /* libPods-TestModule-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestModule-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C35EAB94930998D19ED2293 /* Pods-TestModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestModule.debug.xcconfig"; path = "Target Support Files/Pods-TestModule/Pods-TestModule.debug.xcconfig"; sourceTree = "<group>"; };
+		8BA0001224B6F23800118EE7 /* TestModule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = TestModule.entitlements; path = TestModule/TestModule.entitlements; sourceTree = "<group>"; };
+		8BA0001B24B6F9B800118EE7 /* Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		8BA0001C24B6FA0300118EE7 /* Device.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
 		93AB5B3AF28305501CA635A6 /* Pods-TestModule-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestModule-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-TestModule-tvOSTests/Pods-TestModule-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E799BFEFEEDE3AA04AD0E9D /* Pods-TestModule-TestModuleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestModule-TestModuleTests.release.xcconfig"; path = "Target Support Files/Pods-TestModule-TestModuleTests/Pods-TestModule-TestModuleTests.release.xcconfig"; sourceTree = "<group>"; };
 		BC02430E1023F9BD8C535146 /* libPods-TestModule-TestModuleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestModule-TestModuleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,8 @@
 		13B07FAE1A68108700A75B9A /* TestModule */ = {
 			isa = PBXGroup;
 			children = (
+				8BA0001324B6F31400118EE7 /* Module */,
+				8BA0001224B6F23800118EE7 /* TestModule.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -148,7 +154,6 @@
 				93AB5B3AF28305501CA635A6 /* Pods-TestModule-tvOSTests.debug.xcconfig */,
 				3F4CC2A2A7BB7D496FF7387E /* Pods-TestModule-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -196,6 +201,23 @@
 				2D02E4901E0B4A5D006451C7 /* TestModule-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8BA0001324B6F31400118EE7 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				8BA0001424B6F31E00118EE7 /* Device */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8BA0001424B6F31E00118EE7 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				8BA0001B24B6F9B800118EE7 /* Device.h */,
+				8BA0001C24B6FA0300118EE7 /* Device.m */,
+			);
+			name = Device;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +314,8 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						DevelopmentTeam = PA3DB67VDS;
+						LastSwiftMigration = 1150;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -530,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA0001D24B6FA0300118EE7 /* Device.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -629,7 +653,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TestModule/TestModule.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PA3DB67VDS;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -642,8 +668,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.luvina.TestModule;
 				PRODUCT_NAME = TestModule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Module/TestModule-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -656,7 +683,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TestModule/TestModule.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PA3DB67VDS;
 				INFOPLIST_FILE = TestModule/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -664,8 +693,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.luvina.TestModule;
 				PRODUCT_NAME = TestModule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Module/TestModule-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
